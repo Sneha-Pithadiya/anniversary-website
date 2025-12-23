@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashyap - Sneha</title>
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="hearts-container"></div>
+
+  <!-- header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>❤️</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#memories">Memories</a></li>
+        <li><a href="#message">Message</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">
+  ☰
+</div>
+
+    </nav>
+  </header>
+  <!-- home section -->
+   <section id="home" class="hero">
+    <h1>Happy Anniversary❤️</h1>
+    <p>Celebrating our journey, love, and beautiful moments together.</p>
+
+   </section>
+   <section id="story" class="story">
+    <h2>Our Story</h2>
+    <p class="story-intro">
+      Every beautiful journey begins with a simple moment.  
+    Here are some milestones from our story.
+    </p>
+    <ul class="timeline">
+    <li><strong>2022</strong>-The beginning of our journey</li>
+    <li><strong>2023</strong>-Growing together through every moment</li>
+    <li><strong>2024</strong>-Creating memories that last forever</li>
+    <li><strong>2025</strong>-Still learning, loving, and growing</li>
+</ul>
+   </section>
+   <section id="memories" class="memories">
+  <h2>Memories</h2>
+  <p class="memories-intro">
+    Small moments, big emotions — memories that stay forever.
+  </p>
+
+  <div class="memory-cards">
+    <div class="card">
+      <h3>First Meeting</h3>
+      <p>A moment that changed everything.</p>
+    </div>
+
+    <div class="card">
+      <h3>Special Days</h3>
+      <p>Celebrations filled with love and smiles.</p>
+    </div>
+
+    <div class="card">
+      <h3>Everyday Moments</h3>
+      <p>Simple times that mean the most.</p>
+    </div>
+  </div>
+</section>
+<section id="gallery" class="gallery">
+  <h2>Gallery</h2>
+  <p class="gallery-intro">
+    A collection of moments captured in time.
+  </p>
+
+  <div class="gallery-grid">
+    <img src="https://picsum.photos/300/300?1" alt="Memory 1" />
+    <img src="https://picsum.photos/300/300?2" alt="Memory 2" />
+    <img src="https://picsum.photos/300/300?3" alt="Memory 3" />
+    <img src="https://picsum.photos/300/300?4" alt="Memory 4" />
+    <img src="https://picsum.photos/300/300?5" alt="Memory 5" />
+    <img src="https://picsum.photos/300/300?6" alt="Memory 6" />
+  </div>
+</section>
+
+<section id="message" class="message">
+  <h2>A Note for You</h2>
+
+  <div class="message-box">
+    <p>
+      From the very beginning, every moment with you has been special.
+      Through every challenge and every smile, we have grown stronger together.
+    </p>
+
+    <p>
+      This journey is filled with love, understanding, and endless memories.
+      Here’s to celebrating not just today, but every day we choose each other.
+    </p>
+
+    <p class="signature">
+      With love ❤️
+    </p>
+  </div>
+</section>
+<section id="special" class="special">
+  <h2>Little Things We Love</h2>
+  <p class="special-intro">
+    Simple favorites that make our journey even more special.
+  </p>
+
+  <div class="special-cards">
+    <div class="special-card">
+      <span class="icon">🍔</span>
+      <h3>Favorite Food</h3>
+      <p>Dabeli nights and homemade comfort meals.</p>
+    </div>
+
+<div class="special-card">
+  <span class="icon">🎵</span>
+  <h3>Favorite Song</h3>
+  <p>A song that always brings back beautiful memories.</p>
+
+  <audio controls>
+    <source src="assets/audio/fav.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+    <div class="special-card">
+      <span class="icon">🌍</span>
+      <h3>Favorite Place</h3>
+      <p>Anywhere we are together feels like home.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Celebrating our love • 4th Anniversary</p>
+  <p>Made with ❤️</p>
+</footer>
+<script>
+  const heartsContainer = document.querySelector(".hearts-container");
+
+  function createHeart() {
+    const heart = document.createElement("span");
+    heart.classList.add("heart");
+    heart.innerText = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 10 + 14 + "px";
+    heart.style.animationDuration = Math.random() * 5 + 8 + "s";
+
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 12000);
+  }
+
+  setInterval(createHeart, 800);
+</script>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
